@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.Models", "EmployeeManagement.Models\EmployeeManagement.Models.csproj", "{0863AEF5-A858-4635-B27F-53E4E1E03D12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Models", "EmployeeManagement.Models\EmployeeManagement.Models.csproj", "{0863AEF5-A858-4635-B27F-53E4E1E03D12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.Web", "EmployeeManagement.Web\EmployeeManagement.Web.csproj", "{FD08268E-F609-4598-AAF4-E2EDC26EE167}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Web", "EmployeeManagement.Web\EmployeeManagement.Web.csproj", "{FD08268E-F609-4598-AAF4-E2EDC26EE167}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Api", "EmployeeManagement.Api\EmployeeManagement.Api.csproj", "{BBB6531A-B63B-4DE5-BD32-EFE8083B88E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragimTech.Components", "PragimTech.Components\PragimTech.Components.csproj", "{6628B87B-1A53-45F9-9D19-AF123C06FFBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{FD08268E-F609-4598-AAF4-E2EDC26EE167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD08268E-F609-4598-AAF4-E2EDC26EE167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD08268E-F609-4598-AAF4-E2EDC26EE167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB6531A-B63B-4DE5-BD32-EFE8083B88E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB6531A-B63B-4DE5-BD32-EFE8083B88E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB6531A-B63B-4DE5-BD32-EFE8083B88E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB6531A-B63B-4DE5-BD32-EFE8083B88E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6628B87B-1A53-45F9-9D19-AF123C06FFBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6628B87B-1A53-45F9-9D19-AF123C06FFBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6628B87B-1A53-45F9-9D19-AF123C06FFBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6628B87B-1A53-45F9-9D19-AF123C06FFBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

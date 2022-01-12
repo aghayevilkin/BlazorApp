@@ -1,4 +1,5 @@
 ﻿using EmployeeManagement.Models;
+using EmployeeManagement.Web.Services;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
@@ -10,58 +11,32 @@ namespace EmployeeManagement.Web.Pages
     public class EmployeeListBase : ComponentBase
     {
 
-        protected override async Task OnInitializedAsync()
-        {
-            await Task.Run(LoadEmployees);
-        }
+        [Inject]
+        public IEmployeeService EmployeeService { get; set; }
 
         public IEnumerable<Employee> Employees { get; set; }
 
-
-        private void LoadEmployees()
+        public bool ShowFooter { get; set; } = true;
+        protected override async Task OnInitializedAsync()
         {
-
-            System.Threading.Thread.Sleep(3000);
-
-            Employee e1 = new Employee
-            {
-                EmployeeId = 1,
-                FirstName = "Ilkin",
-                LastName = "Aghayev",
-                Email = "Ilkinga@code.edu.az",
-                DateOfBirth = new DateTime(2001,4,6),
-                Gender = Gender.Male,
-                Department = new Department { DepartmentId = 1, DepartmentName = "Baku"},
-                PhotoPath = "Images/1.jpg"
-            };
-
-            Employee e2 = new Employee
-            {
-                EmployeeId = 1,
-                FirstName = "John",
-                LastName = "Quliyev",
-                Email = "John@gmail.com",
-                DateOfBirth = new DateTime(1995, 6, 8),
-                Gender = Gender.Male,
-                Department = new Department { DepartmentId = 1, DepartmentName = "Baku" },
-                PhotoPath = "Images/2.jpg"
-            };
-
-            Employee e3 = new Employee
-            {
-                EmployeeId = 1,
-                FirstName = "Abbas",
-                LastName = "Abbasov",
-                Email = "Ilkinga@code.edu.az",
-                DateOfBirth = new DateTime(1889, 5, 2),
-                Gender = Gender.Male,
-                Department = new Department { DepartmentId = 1, DepartmentName = "Baku" },
-                PhotoPath = "Images/1.jpg"
-            };
-
-
-            Employees = new List<Employee> { e1, e2, e3 };
-
+            Employees = (await EmployeeService.GetEmployees()).ToList();
         }
+
+
+        protected int SelectedEmployeesCount { get; set; } = 0;
+
+        protected void EmployeeSelectionChanged(bool isSelected)
+        {
+            if (isSelected)
+            {
+                SelectedEmployeesCount++;
+            }
+            else
+            {
+                SelectedEmployeesCount--;
+            }
+        }
+
+
     }
 }
