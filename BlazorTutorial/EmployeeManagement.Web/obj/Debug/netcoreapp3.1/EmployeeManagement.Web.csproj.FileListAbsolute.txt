@@ -82,3 +82,7 @@ C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\bin\Debug\netco
 C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.dll
 C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\bin\Debug\netcoreapp3.1\PragimTech.Components.dll
 C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\bin\Debug\netcoreapp3.1\PragimTech.Components.pdb
+C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll
+C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
