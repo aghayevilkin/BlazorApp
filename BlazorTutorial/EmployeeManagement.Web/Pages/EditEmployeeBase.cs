@@ -15,6 +15,8 @@ namespace EmployeeManagement.Web.Pages
         [Inject]
         public IEmployeeService EmployeeService { get; set; }
 
+        public string PageHeaderText { get; set; }
+
         private Employee Employee { get; set; } = new Employee();
         public EditEmployeeModel EditEmployeeModel { get; set; } = new EditEmployeeModel();
 
@@ -36,7 +38,26 @@ namespace EmployeeManagement.Web.Pages
 
         protected async override Task OnInitializedAsync()
         {
-            Employee = await EmployeeService.GetEmployee(int.Parse(Id));
+
+            int.TryParse(Id, out int employeeId);
+
+            if (employeeId != 0)
+            {
+                PageHeaderText = "Edit Employee";
+                Employee = await EmployeeService.GetEmployee(int.Parse(Id));
+            }
+            else
+            {
+                PageHeaderText = "Create Employee";
+                Employee = new Employee
+                {
+                    DepartmentId = 1,
+                    DateOfBirth = DateTime.Now,
+                    PhotoPath = "Images/nophoto.jpg"
+                };
+            }
+
+            
             Departments = (await DepartmentService.GetDepartments()).ToList();
             DepartmentId = Employee.DepartmentId.ToString();
 
@@ -60,7 +81,19 @@ namespace EmployeeManagement.Web.Pages
         protected async Task HandleValidSubmit()
         {
             Mapper.Map(EditEmployeeModel, Employee);
-            var result = await EmployeeService.UpdateEmployee(Employee);
+
+            Employee result = null;
+
+            if (Employee.EmployeeId != 0)
+            {
+                result = await EmployeeService.UpdateEmployee(Employee);
+            }
+            else
+            {
+                result = await EmployeeService.CreateEmployee(Employee);
+            }
+
+            
             if (result != null)
             {
                 NavigationManager.NavigateTo("/");

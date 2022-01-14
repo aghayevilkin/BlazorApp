@@ -1,11 +1,12 @@
 ﻿@page "/editemployee/{id}"
+@page "/editemployee"
 
 @inherits EditEmployeeBase
 
 <EditForm Model="@EditEmployeeModel" OnValidSubmit="HandleValidSubmit">
     @*<DataAnnotationsValidator />*@
     <ObjectGraphDataAnnotationsValidator />
-    <h3>Edit Employee</h3>
+    <h3>@PageHeaderText</h3>
     <hr />
     <ValidationSummary />
     <div class="form-group row">
