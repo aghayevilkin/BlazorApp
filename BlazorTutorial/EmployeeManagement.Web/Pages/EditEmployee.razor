@@ -93,6 +93,22 @@
             </div>
         </div>*@
 
-    <button class="btn btn-primary" type="submit">Save</button>
+
+    @if (EditEmployeeModel.EmployeeId > 0)
+    {
+        <button class="btn btn-primary" type="submit">Save</button>
+        <button type="button" class="btn btn-danger m-1"
+                @onclick="Delete_Click">
+            Delete
+        </button>
+
+        <Confirm ConfirmationChanged="ConfirmDelete_Click" @ref="DeleteConfirmation" ConfirmationMessage=@($"Are you sure you want to delete \"{EditEmployeeModel.FirstName}\"")></Confirm>
+
+    }
+    else
+    {
+        <button class="btn btn-primary" type="submit">Create</button>
+    }
+
 
 </EditForm>

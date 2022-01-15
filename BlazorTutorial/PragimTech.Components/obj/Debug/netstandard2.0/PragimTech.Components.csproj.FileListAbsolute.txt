@@ -21,3 +21,6 @@ C:\Users\ASUS\source\repos\BlazorTutorial\PragimTech.Components\obj\Debug\netsta
 C:\Users\ASUS\source\repos\BlazorTutorial\PragimTech.Components\obj\Debug\netstandard2.0\PragimTech.Components.RazorTargetAssemblyInfo.cache
 C:\Users\ASUS\source\repos\BlazorTutorial\PragimTech.Components\obj\Debug\netstandard2.0\PragimTech.Components.dll
 C:\Users\ASUS\source\repos\BlazorTutorial\PragimTech.Components\obj\Debug\netstandard2.0\PragimTech.Components.pdb
+C:\Users\ASUS\source\repos\BlazorTutorial\PragimTech.Components\obj\Debug\netstandard2.0\PragimTech.Components.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\BlazorTutorial\PragimTech.Components\obj\Debug\netstandard2.0\RazorDeclaration\Confirm.razor.g.cs
+C:\Users\ASUS\source\repos\BlazorTutorial\PragimTech.Components\obj\Debug\netstandard2.0\Razor\Confirm.razor.g.cs

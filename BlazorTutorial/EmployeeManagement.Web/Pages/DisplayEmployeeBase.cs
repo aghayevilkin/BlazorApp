@@ -1,4 +1,5 @@
 ﻿using EmployeeManagement.Models;
+using EmployeeManagement.Web.Services;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,12 @@ namespace EmployeeManagement.Web.Pages
         [Parameter]
         public Employee Employee { get; set; }
 
+        [Inject]
+        public IEmployeeService EmployeeService { get; set; }
+
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
+
         [Parameter]
         public bool ShowFooter { get; set; }
 
@@ -19,11 +26,38 @@ namespace EmployeeManagement.Web.Pages
 
         [Parameter]
         public EventCallback<bool> OnEmployeeSelection { get; set; }
+        
+        [Parameter]
+        public EventCallback<int> OnEmployeeDeleted { get; set; }
+
+        protected PragimTech.Components.ConfirmBase DeleteConfirmation { get; set; }
 
         protected async Task CheckBoxChanged(ChangeEventArgs e)
         {
             IsSelected = (bool)e.Value;
             await OnEmployeeSelection.InvokeAsync(IsSelected);
         }
+
+        protected void Delete_Click()
+        {
+            DeleteConfirmation.Show();
+        }
+
+        protected async Task ConfirmDelete_Click(bool deleteConfirmed)
+        {
+            if (deleteConfirmed)
+            {
+                await EmployeeService.DeleteEmployee(Employee.EmployeeId);
+                await OnEmployeeDeleted.InvokeAsync(Employee.EmployeeId);
+            }
+        }
+
+        //protected async Task Delete_Click()
+        //{
+        //    await EmployeeService.DeleteEmployee(Employee.EmployeeId);
+        //    await OnEmployeeDeleted.InvokeAsync(Employee.EmployeeId);
+        //    //NavigationManager.NavigateTo("/", true);
+        //}
+
     }
 }
