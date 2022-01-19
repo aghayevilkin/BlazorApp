@@ -105,6 +105,9 @@ using EmployeeManagement.Models;
     [CascadingParameter(Name = "BorderStyle")]
     public string H1Border { get; set; }
 
+    [CascadingParameter(Name = "Counter")]
+    public int Counter { get; set; }
+
 #line default
 #line hidden
 #nullable disable

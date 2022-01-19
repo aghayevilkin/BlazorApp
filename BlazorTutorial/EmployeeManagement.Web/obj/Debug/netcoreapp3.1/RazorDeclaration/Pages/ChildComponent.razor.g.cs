@@ -102,9 +102,12 @@ using EmployeeManagement.Models;
 
     [CascadingParameter(Name = "ColorStyle")]
     public string ElementStyle { get; set; }
-    
+
     [CascadingParameter(Name = "BorderStyle")]
     public string H1Border { get; set; }
+
+    [CascadingParameter(Name = "Counter")]
+    public int Counter { get; set; }
 
 
     //[Parameter(CaptureUnmatchedValues = true)]
