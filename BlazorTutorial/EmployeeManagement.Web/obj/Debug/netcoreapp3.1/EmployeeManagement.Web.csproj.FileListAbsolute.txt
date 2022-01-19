@@ -90,3 +90,5 @@ C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\obj\Debug\netco
 C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\ParentComponent.razor.g.cs
 C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\obj\Debug\netcoreapp3.1\Razor\Pages\ChildComponent.razor.g.cs
 C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\obj\Debug\netcoreapp3.1\Razor\Pages\ParentComponent.razor.g.cs
+C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\GrandChildComponent.razor.g.cs
+C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\obj\Debug\netcoreapp3.1\Razor\Pages\GrandChildComponent.razor.g.cs

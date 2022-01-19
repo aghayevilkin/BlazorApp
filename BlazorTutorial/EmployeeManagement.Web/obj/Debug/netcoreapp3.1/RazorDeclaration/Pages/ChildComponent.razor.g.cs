@@ -97,11 +97,18 @@ using EmployeeManagement.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 7 "C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\Pages\ChildComponent.razor"
+#line 11 "C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\Pages\ChildComponent.razor"
        
 
-    [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object> InputAttributes { get; set; } = new Dictionary<string, object>();
+    [CascadingParameter]
+    public string ElementStyle { get; set; }
+
+    //[Parameter(CaptureUnmatchedValues = true)]
+    //public Dictionary<string, object> InputAttributes { get; set; } = new Dictionary<string, object>();
+
+    //[Parameter]
+    //public string Value { get; set; } = "Child Value";
+
     //{
     //    { "required", "required" },
     //    { "placeholder", "Child Component Placeholder" },
@@ -109,8 +116,7 @@ using EmployeeManagement.Models;
     //    { "maxlength", "15" }
     //};
 
-    [Parameter]
-    public string Value { get; set; } = "Child Value";
+
 
     //[Parameter]
     //public string Required { get; set; } = "required";

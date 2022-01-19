@@ -1,13 +1,24 @@
 ﻿
 
-<input id="firstName" placeholder="Default Placeholder" @attributes="InputAttributes" value="@Value" />
+@*<input id="firstName" placeholder="Default Placeholder" @attributes="InputAttributes" value="@Value" />*@
 @*<input id="firstName" @attributes="InputAttributes" value="@Value" />*@
 @*<input id="firstName" required="@Required" maxlength="@MaxLength" size="@Size" placeholder="@Placeholder" />*@
 
+<h1 style="@ElementStyle">- Child Component Text</h1>
+
+<GrandChildComponent></GrandChildComponent>
+
 @code {
 
-    [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string, object> InputAttributes { get; set; } = new Dictionary<string, object>();
+    [CascadingParameter]
+    public string ElementStyle { get; set; }
+
+    //[Parameter(CaptureUnmatchedValues = true)]
+    //public Dictionary<string, object> InputAttributes { get; set; } = new Dictionary<string, object>();
+
+    //[Parameter]
+    //public string Value { get; set; } = "Child Value";
+
     //{
     //    { "required", "required" },
     //    { "placeholder", "Child Component Placeholder" },
@@ -15,8 +26,7 @@
     //    { "maxlength", "15" }
     //};
 
-    [Parameter]
-    public string Value { get; set; } = "Child Value";
+
 
     //[Parameter]
     //public string Required { get; set; } = "required";
