@@ -100,8 +100,12 @@ using EmployeeManagement.Models;
 #line 11 "C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\Pages\ChildComponent.razor"
        
 
-    [CascadingParameter]
+    [CascadingParameter(Name = "ColorStyle")]
     public string ElementStyle { get; set; }
+    
+    [CascadingParameter(Name = "BorderStyle")]
+    public string H1Border { get; set; }
+
 
     //[Parameter(CaptureUnmatchedValues = true)]
     //public Dictionary<string, object> InputAttributes { get; set; } = new Dictionary<string, object>();

@@ -99,8 +99,11 @@ using EmployeeManagement.Models;
 #nullable restore
 #line 4 "C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\Pages\GrandChildComponent.razor"
        
-    [CascadingParameter]
+    [CascadingParameter(Name = "ColorStyle")]
     public string ElementStyle { get; set; }
+
+    [CascadingParameter(Name = "BorderStyle")]
+    public string H1Border { get; set; }
 
 #line default
 #line hidden

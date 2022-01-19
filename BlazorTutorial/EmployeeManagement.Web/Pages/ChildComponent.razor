@@ -4,14 +4,18 @@
 @*<input id="firstName" @attributes="InputAttributes" value="@Value" />*@
 @*<input id="firstName" required="@Required" maxlength="@MaxLength" size="@Size" placeholder="@Placeholder" />*@
 
-<h1 style="@ElementStyle">- Child Component Text</h1>
+<h1 style="@ElementStyle; @H1Border">- Child Component Text</h1>
 
 <GrandChildComponent></GrandChildComponent>
 
 @code {
 
-    [CascadingParameter]
+    [CascadingParameter(Name = "ColorStyle")]
     public string ElementStyle { get; set; }
+    
+    [CascadingParameter(Name = "BorderStyle")]
+    public string H1Border { get; set; }
+
 
     //[Parameter(CaptureUnmatchedValues = true)]
     //public Dictionary<string, object> InputAttributes { get; set; } = new Dictionary<string, object>();

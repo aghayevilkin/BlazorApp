@@ -98,7 +98,7 @@ using EmployeeManagement.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 14 "C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor"
+#line 16 "C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor"
        
     //public Dictionary<string, object> attributesFromParent { get; set; } =
     //    new Dictionary<string, object>()
@@ -111,6 +111,7 @@ using EmployeeManagement.Models;
     //        };
 
     public string Style { get; set; } = "color:red";
+    public string BorderStyle { get; set; } = "border: 1px solid red";
 
 #line default
 #line hidden
