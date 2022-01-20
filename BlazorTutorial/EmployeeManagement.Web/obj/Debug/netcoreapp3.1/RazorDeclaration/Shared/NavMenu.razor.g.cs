@@ -97,7 +97,7 @@ using EmployeeManagement.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 29 "C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\Shared\NavMenu.razor"
+#line 46 "C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
@@ -109,7 +109,7 @@ using EmployeeManagement.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 35 "C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\Shared\NavMenu.razor"
+#line 52 "C:\Users\ASUS\source\repos\BlazorTutorial\EmployeeManagement.Web\Shared\NavMenu.razor"
 
     private void HandleClick()
     {
